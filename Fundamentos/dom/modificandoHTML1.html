@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        
+        const body = document.querySelector('body')// pego  a propriedade body
+
+
+        const div1 = document.createElement('div')// criando uma div
+        div1.classList.add('destaque')// adicono a classe css a essa div
+        div1.innerHTML = 'Primeiro' // insiro um texto dentro da div
+
+        const div2 = document.createElement('div')
+        div2.classList.add('destaque')
+        div2.innerHTML ='Segundo'
+
+        const p = document.createElement('p')// crio um elemento paragrafo que contem um texto
+        p.innerHTML = 'Terceiro'
+
+        const p2 = document.createElement('p')
+        p2.innerHTML= 'E Ultimo'
+
+        const div3 = document.createElement('div')
+        div3.classList.add('destaque')
+
+        div3.appendChild(p)// adicona os paragrafos dentro da div3
+        div3.appendChild(p2)
+
+        body.appendChild(div1)//adiconas as div ao corpo da pagina
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+
+        const texto = document.createElement('Antes') // crio um texto
+        div3.insertBefore(texto,div3.childNodes[0]) //falo pra inserir dentro da div3 antes do primeiro elemento encontrado
+
+        const div4 =  div3.cloneNode(true) // faço um clone da div3. ps: quando é true copia a div com todo seu conteudo interno, se for false só copia a div sem seus conteudo
+        body.appendChild(div4)// add a div4 ao copro
+        body.removeChild(div3)// remove a div4 dque tinha sido clonada
+
+
+
+
+    </script>
+</body>
+
+</html>

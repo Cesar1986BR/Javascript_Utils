@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Classes</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        Classes
+    </div>
+    <script>
+        const classe = document.querySelector('div').classList// seleciona minha div
+        
+        classe.add('destaque')// adiciona classe css chamada 'destaque'
+        classe.remove('destaque')
+        classe.toggle('destaque')
+        console.log(classe.contains('destaque'))//returna true or false
+        console.log(classe.length)
+        classe.toggle('destaque')
+        console.log(classe.length)
+
+        classe.add('destaque1')
+        classe.add('destaque2')
+        console.log(classe.length)
+
+        for(let c of classe){
+               console.log(c) 
+        }
+
+    </script>
+</body>
+
+</html>
